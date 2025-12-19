@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="card">
+    <view class="title">天津中考英语作文评分</view>
+    <textarea class="essay-input" placeholder="请输入英文作文" maxlength="-1" bindinput="onInput" value="{{essay}}"></textarea>
+    <button type="primary" class="primary" bindtap="submit">提交评分</button>
+  </view>
+
+  <view wx:if="{{loading}}" class="card">评分中，请稍候…</view>
+
+  <view wx:if="{{result}}" class="card">
+    <view class="subtitle">总分：{{result.total}}</view>
+    <view class="rubric" wx:for="{{rubricList}}" wx:key="key">
+      <view class="rubric-row">
+        <text class="rubric-key">{{item.key}}</text>
+        <text class="rubric-value">{{item.score}} / {{item.max}}</text>
+      </view>
+      <view class="rationale">{{item.rationale}}</view>
+      <view wx:if="{{item.issues}}" class="issues">
+        <view wx:for="{{item.issues}}" wx:key="{{index}}">• {{item}}</view>
+      </view>
+    </view>
+    <view class="subtitle">教师建议</view>
+    <view class="advice">{{result.advice}}</view>
+  </view>
+</view>

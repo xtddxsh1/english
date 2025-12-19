@@ -1,0 +1,10 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "天津中考英语作文评分",
+    "navigationBarBackgroundColor": "#1890ff",
+    "backgroundTextStyle": "light"
+  }
+}

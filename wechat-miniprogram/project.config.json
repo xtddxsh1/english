@@ -1,0 +1,11 @@
+{
+  "miniprogramRoot": "",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true
+  },
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "projectname": "tj-english-scoring"
+}
